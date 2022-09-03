@@ -48,4 +48,7 @@ module.exports = {
       return webpackConfig;
     },
   },
+  babel: {
+    plugins: ["@vanilla-extract/babel-plugin"],
+  },
 };

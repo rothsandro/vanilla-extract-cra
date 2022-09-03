@@ -3,7 +3,7 @@ import * as css from "./App.css";
 
 function App() {
   return (
-    <div className={[themeClass, css.App].join(" ")}>
+    <div className={themeClass}>
       <span className={css.logo}></span>
       <h1 className={css.title}>create-react-app + vanilla-extract = ❤️</h1>
     </div>
