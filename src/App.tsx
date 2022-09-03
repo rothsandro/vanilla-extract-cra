@@ -3,8 +3,9 @@ import * as css from "./App.css";
 
 function App() {
   return (
-    <div className={themeClass}>
-      <h1 className={css.title}>Hello World</h1>
+    <div className={[themeClass, css.App].join(" ")}>
+      <span className={css.logo}></span>
+      <h1 className={css.title}>create-react-app + vanilla-extract = ❤️</h1>
     </div>
   );
 }
