@@ -1,4 +1,5 @@
 const { VanillaExtractPlugin } = require("@vanilla-extract/webpack-plugin");
+const ModuleScopePlugin = require("react-dev-utils/ModuleScopePlugin");
 const cloneDeep = require("lodash.clonedeep");
 const path = require("path");
 
@@ -44,6 +45,13 @@ module.exports = {
       // it must come before the existing CSS loader which
       // handles all CSS files.
       oneOfRule.oneOf.unshift(vanillaExtractRule);
+
+      const moduleScopePlugin = webpackConfig.resolve.plugins.find(
+        (plugin) => plugin instanceof ModuleScopePlugin
+      );
+      moduleScopePlugin.allowedPaths.push(
+        path.resolve(__dirname, "node_modules/@vanilla-extract/webpack-plugin")
+      );
 
       return webpackConfig;
     },
