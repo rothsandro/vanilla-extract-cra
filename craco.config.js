@@ -56,7 +56,13 @@ module.exports = {
       return webpackConfig;
     },
   },
-  babel: {
-    plugins: ["@vanilla-extract/babel-plugin"],
+  jest: {
+    configure: (jestConfig) => {
+      jestConfig.transform = {
+        "\\.css\\.ts$": "@vanilla-extract/jest-transform",
+        ...jestConfig.transform,
+      };
+      return jestConfig;
+    },
   },
 };

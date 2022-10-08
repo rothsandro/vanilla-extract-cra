@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "@craco/craco": "^7.0.0-alpha.7",
-    "@vanilla-extract/babel-plugin": "^1.1.7",
+    "@vanilla-extract/jest-transform": "^1.0.1",
     "@vanilla-extract/webpack-plugin": "^2.1.12",
     "lodash.clonedeep": "^4.5.0"
   }
